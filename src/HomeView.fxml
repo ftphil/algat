@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane prefHeight="423.0" prefWidth="600.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="algat.AlgatApp">
+   <tabs>
+      <Tab text="Introduzione">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <StackPane prefHeight="354.5" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="354.5" prefWidth="600.0" StackPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="115.0" fitWidth="224.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/unibologo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="152.0" fitWidth="139.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/Untitled_Artwork.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="402.0" style="-fx-alignment: center;" text="Tecniche di programmazione Greedy" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Apple Braille" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="402.0" style="-fx-alignment: center;" text="a cura di Filippo Peterlini Università degli studi di Bologna 2019" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Apple Braille" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-alignment: center;" text="Le tecniche di programmazione Greedy si applicano ai problemi dove occorre trovare un sottoinsieme ottimo di elementi che verificano certe proprietà." textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font name="Apple Braille" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-alignment: center;" text="Come primo passo l’algoritmo deve ordinare gli elementi dell’insieme iniziale in modo che questi soddisfino un certo criterio d’interesse." textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font name="Apple Braille" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-alignment: center;" text="L’algoritmo procede sull’insieme ordinato decidendo ad ogni passo se l’oggetto soddisfa la “scelta Greedy” identificando un ottimo locale. Effettuando questa sequenza incrementale di scelte si ottengono sotto-problemi dello stesso tipo ma di dimensione più piccola, fino ad ottenere la costruzione dell’insieme ottimo." textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font name="Apple Braille" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Problema dello zaino reale">
+         <content>
+            <AnchorPane minHeight="180.0" minWidth="200.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="354.5" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="Problema" textAlignment="CENTER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Dati n oggetti con rispettivi profitti e volumi (rappresentati da valori interi positivi) e una capacità C (definita da un valore intero positivo) dello zaino." textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Scegliere oggetti o porzioni di essi (X1, …,Xn compresi tra [0,1]) in modo da non superare C e massimizzare il profitto." textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Usiamo Pi e Vi per indicare rispettivamente il profitto e il volume di un oggetto i." textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Algoritmo">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <StackPane>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fitHeight="171.0" fitWidth="319.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/form.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <Label prefHeight="25.0" prefWidth="210.0" text="Complessità O(n log n)">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="realBackpackBtn" mnemonicParsing="false" onAction="#initRealBackpack" text="Tutorial" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Algoritmo di Kruskal">
+         <content>
+            <AnchorPane>
+               <children>
+                  <VBox prefHeight="378.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Problema (Mininum Spanning Tree)" textAlignment="CENTER">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Dato un grafo G = (V,E)pesato non orientato e connesso, con pesi non negativi sugli archi." textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Trovare un albero di copertura per G, cioè un albero avente tutti i nodi di V collegati però da solo n-1 degli m archi in E." textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Il peso totale degli archi compresi nell' albero di copertura deve essere minimo." textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Algoritmo">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <StackPane>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="474.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/kruskal.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <Label prefHeight="25.0" prefWidth="210.0" text="Complessità O(m log n)">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="kruskalBtn" layoutX="515.0" layoutY="335.0" mnemonicParsing="false" onAction="#initKruskal" text="Tutorial" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Domande">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Accordion prefHeight="378.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane animated="false" text="Problema dello zaino reale">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pagination fx:id="pagRealBackpack" layoutX="175.0" layoutY="84.0" maxPageIndicatorCount="5" pageCount="5" prefHeight="319.0" prefWidth="598.0" style="-fx-arrows-visible: false; -fx-max-page-indicator-count: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Algoritmo di Kruskal">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pagination fx:id="pagKruskal" maxPageIndicatorCount="5" pageCount="5" prefHeight="319.0" prefWidth="598.0" style="-fx-arrows-visible: false; -fx-max-page-indicator-count: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
